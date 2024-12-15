@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans JP", serif;
+}
+
+h2 {
+  font-size: 34px;
+  text-align: center;
+  padding: 100px 0 50px 0;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* ヘッダー */
+#home {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: space-between;
+max-width: 960px;
+margin: 0 auto;
+}
+
+#home > h1 {
+  font-size: 34px;
+  border: 1px solid black;
+  padding: 0 18px;
+}
+
+nav > ul {
+  padding-left: 0;
+  font-size: 34px;
+  font-weight: bold;
+  display: flex;
+}
+
+nav ul > li {
+  list-style: none;
+  padding: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* メイン写真 */
+/* main > img {
+  width: 100%;
+  margin: 0 auto;
+} */
+/* メイン画像カルーセル  */
+.carouselImg {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* アバウト */
+.hello {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto 50px auto;
+}
+
+.hello > img {
+  width: 280px;
+  height: auto;
+  border-radius: 50%;
+  margin: 50px 50px 0 0;
+}
+
+#name {
+  margin: 0 50px;
+}
+
+/* ワークス */
+#one {
+  display: flex;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.ni {
+  margin: 0 10px;
+  width: calc(100%/3);
+}
+
+.ni > img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.ni > p {
+  margin: 0;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 10% 0 20px 0;
+}
+
+/* TOPに戻るボタン */
+#top {
+  display: none;
+  position: fixed;
+  bottom: 38px;
+  right: 20px;
+  
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 28px 24px;
+  border-radius: 50%;
+  font-family: Noto Sans JP、sans-serif;
+}
+
+/* スクロールしたときにセクションをフェードインさせる */
+/* フェードイン前 */
+.fadein {
+  opacity: 0;
+  transition: 1s;
+}
+/* フェードイン後 */
+.scroll {
+  opacity: 1;
+}
+
+/* Worksの画像をクリックしたときにモーダルで拡大表示する */
+.open {
+  cursor: pointer;
+}
+.open:hover {
+  opacity: 0.5;
+}
+/* モーダル背景 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+  overflow: hidden;
+}
+/* モーダル拡大表示画像 */
+.open-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* モーダル閉じるボタン */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* スマホ用 */
+@media screen and (max-width: 767px) {
+  #home {
+    margin: 0 20px;
+  }
+
+  #home > h1 {
+    font-size: 25px;
+    padding: 0 10px;
+  }
+  
+  nav ul > li {
+    font-size: 20px;
+    padding: 0 0 0 10px;
+  }
+
+  .hello {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .hello > img {
+    margin: 0;
+  }
+
+  #one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .ni {
+    width: 90%;
+    text-align: center;
+    padding-bottom: 15px;
+    margin: 0 auto;
+  }
+
+  /* .ni > img {
+    margin: 0;
+    width: 90%;
+    height: auto;
+  }
+  
+  .ni > p {
+    width: 90%;
+    margin: 0 auto;
+  } */
+  
+}
